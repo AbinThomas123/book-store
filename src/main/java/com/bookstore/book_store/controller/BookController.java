@@ -69,7 +69,7 @@ public class BookController {
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<String> deleteBook(@PathVariable String bookId)
     {
-        bookService.deletBookByBookId(bookId);
+        bookService.deleteBookByBookId(bookId);
         return new ResponseEntity<>("Book deleted Successfully "+ bookId ,HttpStatus.OK);
     }
 
